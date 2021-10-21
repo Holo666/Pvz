@@ -4,10 +4,26 @@ abstract class Zombies{
 int blood
 int atk
 int speed
+int stats
+Position position
 {abstract} spawn()
 {abstract} destroyz()
 attack()
 }
+class Position{
+int x
+int y
+getx()
+gety()
+setx()
+sety()
+}
+class yaoqZ{
+spawn()
+destroyz()
+}
+normalZ<|--yaoqZ
+
 abstract class armorzombies {
 Armor armor
 void setarmor(Armor)
