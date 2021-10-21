@@ -1,0 +1,71 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract class Zombies{
+int blood
+int atk
+int speed
+{abstract} spawn()
+{abstract} destroyz()
+attack()
+}
+abstract class armorzombies {
+Armor armor
+void setarmor(Armor)
+void damagearmor(int damage)
+}
+Zombies<|--armorzombies
+abstract class sheildzombies{
+Sheild sheild
+setsheild()
+damagesheild()
+}
+Zombies<|--sheildzombies
+class normalZ{
+spawn()
+destroyz()
+}
+class ConeheadZ{
+spawn()
+destroyz()
+}
+class ironZ{
+spawn()
+destroyz()
+}
+class cgtZ{
+attack()
+destroyz()
+}
+class readingZ{
+attack()
+spawn()
+destroyz()
+}
+class doorZ{
+attack()
+spawn()
+destroyz()
+}
+class glqZ{
+spawn()
+destroyz()
+}
+class Armor{
+blood
+setblood()
+destroyarmor()
+damagearmor()
+}
+class sheild{
+blood
+damagesheild()
+setsheild()
+}
+armorzombies<|--glqZ
+sheildzombies<|-- doorZ
+sheildzombies<|-- readingZ
+Zombies<|--cgtZ
+armorzombies<|--ironZ
+armorzombies<|--ConeheadZ
+Zombies<|--normalZ
+@enduml
